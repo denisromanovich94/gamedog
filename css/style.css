@@ -4,6 +4,7 @@
 @import "header.css";
 @import "footer.css";
 @import "swiperstyle.css";
+@import "page-404.css";
 
 
 
@@ -894,17 +895,14 @@
     margin-top: 20px;
 }
 
-
-
 @media (max-width: 1497px) {
-    
-.subscribe__inner {
-    padding-left: 190px;
-    padding-right: 190px;
-}
+    .subscribe__inner {
+        padding-left: 190px;
+        padding-right: 190px;
+    }
+
     .button-container {
         bottom: -15%;
-
     }
 
     .button-container2 {
@@ -924,10 +922,34 @@
         justify-content: center;
         align-items: center;
     }
-.subscribe__inner {
-    padding-left: 156px;
-    padding-right: 156px;
-}
+
+    .footer__in {
+        width: auto;
+        max-width: 1182px;
+    }
+
+    .footer__right {
+        max-width: 600px;
+        width: auto;
+    }
+
+    .footer__privacy-list,
+    .footer__socials-list {
+        width: auto;
+        max-width: 300px;
+
+    }
+
+    .footer__about-us__list {
+
+        width: 170px;
+    }
+
+    .subscribe__inner {
+        padding-left: 156px;
+        padding-right: 156px;
+    }
+
     .new-games__inner {
         padding-left: 104px;
         padding-right: 104px;
@@ -980,16 +1002,90 @@
 }
 
 @media (max-width: 1193px) {
-    
-.subscribe__inner {
-    padding-left: 122px;
-    padding-right: 122px;
-}
+    .footer__in {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footer__about-us__list {
+
+        width: 250px;
+    }
+
+    .subscribe__inner {
+        padding-left: 122px;
+        padding-right: 122px;
+    }
+
+    .footer__in {
+        height: 500;
+        width: 375px;
+    }
+
+
+
+    .footer__right {
+        flex-direction: column;
+        padding-top: 10px;
+        
+    }
+
+    .footer__about-us__list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        border-bottom: 1px solid #9aee2d20;
+        border-right: none;
+        width: 100%;
+        gap:0;
+        margin-left: 10px;
+        /* flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start; */
+        height: 200px;
+        padding-left: 16px;
+    }
+
+    .footer__socials-privacy {
+        border-bottom: 1px solid #9aee2d20;
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+        justify-content: start;
+    }
+    .footer__left {
+        height: 200px;
+        background: rgba(72, 77, 67, 0.1);
+        backdrop-filter: blur(30px);
+        padding-left: 16px;
+    }
+    .footer__privacy-list,
+    .footer__socials-list  {
+        gap: 14px;
+    }
+    .footer__socials-list{
+        padding-left: 18px;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+    .footer__privacy-list{
+        margin-top: 33px;
+        margin-left: 30px;
+    }
+    .footer__more-info{
+        gap: 18px;
+        
+    }
+    .footer__logo {
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
     .new-games__inner {
         padding-left: 56px;
         padding-right: 56px;
     }
-
+.footer__socials-link.facebook {
+    padding-left: 12px;
+}
     .hero__in {
         max-width: 800px;
     }
@@ -1025,11 +1121,12 @@
 }
 
 @media (max-width: 998px) {
-    
-.subscribe__inner {
-    padding-left: 96px;
-    padding-right: 96px;
-}
+
+    .subscribe__inner {
+        padding-left: 96px;
+        padding-right: 96px;
+    }
+
     .new-games__inner {
         padding-left: 20px;
         padding-right: 20px;
@@ -1065,6 +1162,7 @@
         padding-left: 84px;
         padding-right: 84px;
     }
+
     .new-games__left {
         max-width: 580px;
     }
@@ -1133,6 +1231,7 @@
         padding-left: 64px;
         padding-right: 64px;
     }
+
     .about__computer-info {
         margin-top: 20px;
     }
@@ -1166,12 +1265,12 @@
 
 @media (max-width: 757px) {
     .subscribe__title {
-        
+
         font-weight: 400;
         font-size: 37px;
         line-height: 120%;
     }
-    
+
     .subscribe__inner {
         padding-left: 56px;
         padding-right: 56px;
@@ -1196,6 +1295,9 @@
 
 
 @media (max-width: 663px) {
+    .footer__inner{
+        padding-left: 20px;
+    }
     .swiper-catalog.new-games {
         display: none;
     }
@@ -1308,6 +1410,7 @@
     .hero__in {
         padding-right: 20px;
     }
+
     .subscribe__inner {
         padding-left: 20px;
         padding-right: 20px;
@@ -1355,6 +1458,9 @@
 
 
 @media (max-width: 450px) {
+    .footer__inner{
+        padding-left: 0;
+    }
     .new-games__left-card1 {
         padding: 10px 10px 10px 10px;
     }
