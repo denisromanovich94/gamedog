@@ -100,3 +100,88 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+// АДАПТИВНЫЙ СЛАЙДЕР СИНГЛ ПРОДУКТ
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.mini-slider__track');
+    const slides = document.querySelectorAll('.mini-slider__item');
+    const navItems = document.querySelectorAll('.nav-item');
+    let currentIndex = 0;
+
+    function updateSlider() {
+        const viewportWidth = document.querySelector('.mini-slider__viewport').clientWidth;
+
+        // Перемещаем слайдер
+        track.style.transform = `translateX(-${currentIndex * viewportWidth}px)`;
+
+        // Обновляем активный элемент навигации
+        navItems.forEach((item, index) => {
+            if (index === currentIndex) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    function goToNextSlide() {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Возврат к первому слайду
+        }
+        updateSlider();
+    }
+
+    function goToPrevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = slides.length - 1; // Переход к последнему слайду
+        }
+        updateSlider();
+    }
+
+    // Добавляем поддержку свайпов
+    let startX = 0;
+    let isDragging = false;
+
+    track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+
+    track.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const currentX = e.touches[0].clientX;
+        const diffX = startX - currentX;
+
+        if (diffX > 50) {
+            goToNextSlide();
+            isDragging = false;
+        } else if (diffX < -50) {
+            goToPrevSlide();
+            isDragging = false;
+        }
+    });
+
+    track.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    // Обновляем слайдер при изменении размера окна
+    window.addEventListener('resize', updateSlider);
+
+    // Добавляем функционал для кликов по навигации
+    navItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider();
+        });
+    });
+
+    // Инициализация
+    updateSlider();
+});

@@ -5,6 +5,8 @@
 @import "footer.css";
 @import "swiperstyle.css";
 @import "page-404.css";
+@import "single.css";
+@import "cart.css";
 
 
 
@@ -896,6 +898,16 @@
 }
 
 @media (max-width: 1497px) {
+    .full-price {
+        
+        margin-right: 0;
+    }
+    .cart__full-price {
+
+        justify-content: space-between;
+
+    
+    }
     .subscribe__inner {
         padding-left: 190px;
         padding-right: 190px;
@@ -998,10 +1010,25 @@
     .header__inner {
         padding-right: 75px;
     }
-
+.cart__subtitle {display: none;}
 }
 
 @media (max-width: 1193px) {
+    .cart__inner {
+        padding-top: 75px;
+        padding-left: 104px;
+        padding-right: 104px;
+    }
+    .single-product__inner {
+        padding-top: 75px;
+        padding-left: 104px;
+        padding-right: 104px;
+    }
+
+    .page-404__in {
+        padding-left: 108px;
+    }
+
     .footer__in {
         display: flex;
         flex-direction: column-reverse;
@@ -1027,16 +1054,16 @@
     .footer__right {
         flex-direction: column;
         padding-top: 10px;
-        
+
     }
 
     .footer__about-us__list {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         border-bottom: 1px solid #9aee2d20;
         border-right: none;
         width: 100%;
-        gap:0;
+        gap: 0;
         margin-left: 10px;
         /* flex-direction: row;
         flex-wrap: wrap;
@@ -1052,40 +1079,49 @@
         height: 100px;
         justify-content: start;
     }
+
     .footer__left {
         height: 200px;
         background: rgba(72, 77, 67, 0.1);
         backdrop-filter: blur(30px);
         padding-left: 16px;
     }
+
     .footer__privacy-list,
-    .footer__socials-list  {
+    .footer__socials-list {
         gap: 14px;
     }
-    .footer__socials-list{
+
+    .footer__socials-list {
         padding-left: 18px;
         margin-top: 28px;
         margin-bottom: 28px;
     }
-    .footer__privacy-list{
+
+    .footer__privacy-list {
         margin-top: 33px;
         margin-left: 30px;
     }
-    .footer__more-info{
+
+    .footer__more-info {
         gap: 18px;
-        
+
     }
+
     .footer__logo {
         margin-bottom: 30px;
         margin-top: 40px;
     }
+
     .new-games__inner {
         padding-left: 56px;
         padding-right: 56px;
     }
-.footer__socials-link.facebook {
-    padding-left: 12px;
-}
+
+    .footer__socials-link.facebook {
+        padding-left: 12px;
+    }
+
     .hero__in {
         max-width: 800px;
     }
@@ -1121,6 +1157,24 @@
 }
 
 @media (max-width: 998px) {
+    .plus-minus {
+        
+        margin-right: 33px;
+    }
+    .cart__inner {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .single-product__card {
+
+        flex-direction: column;
+
+    }
+
+    .page-404__in {
+        padding-left: 54px;
+        padding-top: 80px;
+    }
 
     .subscribe__inner {
         padding-left: 96px;
@@ -1158,6 +1212,49 @@
 }
 
 @media (max-width: 901px) {
+    .page-404__title {
+        font-size: 56px;
+
+        text-align: center;
+    }
+
+    .page-404__text {
+
+        font-weight: 100;
+        font-size: 14px;
+        text-align: center;
+
+    }
+
+    .image.image3 {
+        left: 10%;
+    }
+
+    .image.image4 {
+        right: 72%;
+        bottom: 10%;
+    }
+
+    .image.image5 {
+        right: 85%;
+        bottom: -17%;
+    }
+
+    .image.image6 {
+        right: 7%;
+        bottom: 41%;
+    }
+
+    .image.image7 {
+        right: -2%;
+        bottom: -45%;
+    }
+
+    .page-404__link-home {
+
+        justify-content: center;
+    }
+
     .subscribe__inner {
         padding-left: 84px;
         padding-right: 84px;
@@ -1222,8 +1319,6 @@
         padding-left: 20px;
     }
 
-
-
 }
 
 @media (max-width: 863px) {
@@ -1264,6 +1359,45 @@
 }
 
 @media (max-width: 757px) {
+    .cart__inner {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+
+    .page-404__in {
+        height: 812px;
+
+    }
+
+    .image.image2 {
+        bottom: -6%;
+    }
+
+    .image.image3 {
+        left: 0%;
+    }
+
+    .image.image4 {
+        right: 14%;
+        bottom: 51%;
+    }
+
+    .image.image5 {
+        right: 85%;
+        bottom: 26%;
+    }
+
+    .image.image6 {
+        right: 43%;
+        bottom: 38%;
+    }
+
+    .image.image7 {
+        right: 10%;
+        bottom: 4%;
+    }
+
     .subscribe__title {
 
         font-weight: 400;
@@ -1295,9 +1429,16 @@
 
 
 @media (max-width: 663px) {
-    .footer__inner{
+    .cart__card {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 100%, 0 100%);
+    }
+    .footer__inner {
         padding-left: 20px;
     }
+
     .swiper-catalog.new-games {
         display: none;
     }
@@ -1415,9 +1556,110 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    .single-product__inner {
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @media (max-width: 561px) {
+    .single-gallery-mobile {
+        display: block;
+    }
+
+    .single-gallery-desktop {
+        display: none;
+    }
+
+    .single-product-img-gallery {
+        width: 374px;
+        height: 261px;
+        
+    }
+    .single-product-img-gallery.img1 {
+        background: url('../img/rdrmini.webp') no-repeat;
+    }
+    
+    .single-product-img-gallery.img2 {
+        background: url('../img/rdrmini.webp') no-repeat;
+    }
+    
+    .single-product-img-gallery.img3 {
+        background: url('../img/rdrmini.webp') no-repeat;
+    }
+    
+    .single-product-img-gallery.img4 {
+        
+        background: url('../img/rdrmini.webp') no-repeat;
+    }
+
+    .single-product-img-more {
+        display: none;
+    }
+
+    .single-product__gallery {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .description__single-product-text {
+
+        min-height: 300px;
+    }
+
+    .single-product__info {
+        padding-left: 14px;
+        padding-right: 15px;
+    }
+
+    .single-product-img {
+        background: url('../img/rdrmini.webp') no-repeat;
+        height: 264px
+    }
+
+
+    .page-404__in {
+        padding-left: 0;
+
+    }
+
+    .image.image1 {
+        top: 100%;
+    }
+
+    .image.image2 {
+        bottom: 23%;
+        left: 65%;
+    }
+
+    .image.image3 {
+        left: -1%;
+        top: 44%;
+    }
+
+    .image.image4 {
+        right: 4%;
+        bottom: 49%;
+    }
+
+    .image.image5 {
+        right: 65%;
+        bottom: 10%;
+    }
+
+    .image.image6 {
+        right: 34%;
+        bottom: 38%;
+    }
+
+    .image.image7 {
+        right: -5%;
+        bottom: 2%;
+    }
+
     .swiper-container {
         transform: scale(.7);
         margin-top: -50px;
@@ -1458,9 +1700,16 @@
 
 
 @media (max-width: 450px) {
-    .footer__inner{
+    .single-product__inner {
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer__inner {
         padding-left: 0;
     }
+
     .new-games__left-card1 {
         padding: 10px 10px 10px 10px;
     }

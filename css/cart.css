@@ -1,0 +1,150 @@
+.cart__inner {
+    padding-top: 111px;
+    padding-left: 209px;
+    padding-right: 209px;
+}
+
+.cart__in {
+    max-width: 1180px;
+    height: auto;
+}
+
+
+.cart__title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 132%;
+    color: #f5ffe6;
+    margin-bottom: 14px;
+}
+.stels {
+    opacity: 0;
+}
+.cart__subtitle {
+    display: grid;
+    grid-template-columns: 1.5fr 0.9fr 1.1fr;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.6;
+    margin-bottom: 20px;
+
+
+}
+
+
+.cart__card {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background: #4e4e4e3d;
+    margin-bottom: 15px;
+    border: 1px solid #383838;
+    padding-right: 31px;
+    clip-path: polygon(0 0, 96% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.cart__card-in {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    color: #f5ffe6;
+}
+
+.cart__card-price {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.cart__card-plus__minus {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.plus-minus {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #383838;
+    margin-right: 189px;
+}
+
+
+.plus,
+.minus,
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #383838;
+    padding: 16px;
+    width: 48px;
+    height: 36px;
+    
+}
+
+.price {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: #f5ffe6;
+}
+
+
+.cart__full-price {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: end;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: #f5ffe6;
+
+}
+
+.cart__full-price span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.cart__card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    color: #111;
+    width: 173px;
+    height: 50px;
+    background: #99ee2d;
+    clip-path: polygon(0 0, 80% 0, 100% 55%, 100% 100%, 0 100%);
+}
+
+
+.full-price {
+    display: flex;
+    flex-direction: column;
+    margin-right: 415px;
+}

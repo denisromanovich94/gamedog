@@ -1,12 +1,117 @@
 .page-404 {
+    height: auto;
 }
+
 .page-404__inner {
+    position: relative;
+    
 }
+
 .page-404__in {
+    padding-left: 208px;
+    padding-top: 164px;
 }
+
 .page-404__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 100%;
+    color: #fff;
+    margin-bottom: 15px;
 }
+
 .page-404__text {
+    font-family: var(--font-family);
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 150%;
+    color: #fff;
+    margin-bottom: 55px;
 }
+
+.btn-404 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 178px;
+    height: 50px;
+    background: #99ee2d;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    color: #111;
+}
+
 .page-404__link-home {
+    display: flex;
+}
+
+
+.image {
+    position: absolute;
+
+}
+
+.image.image1 {
+    background: url('../img/1.webp') no-repeat;
+    left: 0;
+    top: 50%;
+    width: 51px;
+    height: 51px;
+    transform: rotate(-9deg);
+}
+
+.image.image2 {
+    background: url('../img/2.webp')no-repeat;
+    width: 118px;
+    height: 118px;
+    transform: rotate(-9deg);
+    left: 27%;
+    bottom: -30%;
+}
+
+.image.image3 {
+    background: url('../img/3.webp')no-repeat;
+    width: 54px;
+    height: 54px;
+    /* transform: rotate(-28deg); */
+    top: 29%;
+    left: 48%;
+}
+
+.image.image4 {
+    background: url('../img/4.webp')no-repeat;
+    width: 54px;
+    height: 54px;
+    right: 37%;
+    bottom: 28%;
+}
+
+.image.image5 {
+    background: url('../img/5.webp')no-repeat;
+    width: 109px;
+    height: 103px;
+    right: 28%;
+    bottom: 51%;
+}
+
+.image.image6 {
+    background: url('../img/6.webp')no-repeat;
+    width: 172px;
+    height: 129px;
+    right: 15%;
+    bottom: 35%;
+}
+
+.image.image7 {
+    background: url('../img/7.webp')no-repeat;
+    width: 264px;
+height: 264px;
+right: 5%;
+    bottom: -25%;
 }
