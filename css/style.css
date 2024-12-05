@@ -7,6 +7,7 @@
 @import "page-404.css";
 @import "single.css";
 @import "cart.css";
+@import "shop.css";
 
 
 
@@ -899,15 +900,17 @@
 
 @media (max-width: 1497px) {
     .full-price {
-        
+
         margin-right: 0;
     }
+
     .cart__full-price {
 
         justify-content: space-between;
 
-    
+
     }
+
     .subscribe__inner {
         padding-left: 190px;
         padding-right: 190px;
@@ -926,9 +929,21 @@
         bottom: -15%;
 
     }
+
+    .shop__inner {
+        padding-top: 115px;
+        padding-right: 100px;
+        padding-left: 100px;
+    }
 }
 
 @media (max-width: 1351px) {
+    .shop__inner {
+        padding-top: 75px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
     .subscribe__catalog {
         flex-wrap: wrap;
         justify-content: center;
@@ -1010,15 +1025,25 @@
     .header__inner {
         padding-right: 75px;
     }
-.cart__subtitle {display: none;}
+
+    .cart__subtitle {
+        display: none;
+    }
 }
 
 @media (max-width: 1193px) {
+    .catalog__inner {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
     .cart__inner {
         padding-top: 75px;
         padding-left: 104px;
         padding-right: 104px;
     }
+
     .single-product__inner {
         padding-top: 75px;
         padding-left: 104px;
@@ -1158,13 +1183,15 @@
 
 @media (max-width: 998px) {
     .plus-minus {
-        
+
         margin-right: 33px;
     }
+
     .cart__inner {
         padding-left: 50px;
         padding-right: 50px;
     }
+
     .single-product__card {
 
         flex-direction: column;
@@ -1212,6 +1239,15 @@
 }
 
 @media (max-width: 901px) {
+    .sidebar-filter {
+
+        clip-path: polygon(0 0, 90% 0, 100% 1%, 100% 100%, 0 100%);
+    }
+
+    .catalog__inner {
+        grid-template-columns: 1fr;
+    }
+
     .page-404__title {
         font-size: 56px;
 
@@ -1363,7 +1399,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    
+
 
     .page-404__in {
         height: 812px;
@@ -1429,12 +1465,65 @@
 
 
 @media (max-width: 663px) {
+
+    .catalog__inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .shop__inner {
+
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .swiper-slide.shop-card {
+        max-width: 164px;
+        max-height: 204px;
+    }
+
+    .img-swiper-slide.shop-card img {
+        width: 164px;
+        height: 204px;
+    }
+
+    .price__info.shop-card {
+        font-weight: 500;
+        font-size: 12px;
+        max-width: 164px;
+    }
+
+    .price__info.shop-card span {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .shop__in {
+        flex-direction: column;
+    }
+
+    .filter-header {
+        display: flex;
+    }
+
+    .shop__inner-title {
+        display: none;
+    }
+
+    .setting {
+        display: block;
+    }
+
+    .sidebar-filter {
+        width: 100%;
+        clip-path: polygon(0 0, 90% 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
     .cart__card {
         flex-direction: column;
         gap: 20px;
         align-items: start;
         clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 100%, 0 100%);
     }
+
     .footer__inner {
         padding-left: 20px;
     }
@@ -1565,6 +1654,16 @@
 }
 
 @media (max-width: 561px) {
+    
+    .sidebar-filter {
+        background: transparent;
+        border-right: none;
+        width: 100%;
+        padding: 0;
+    }
+    .filter-section1.mobile-shop1{
+        display: none;
+    }
     .single-gallery-mobile {
         display: block;
     }
@@ -1576,22 +1675,23 @@
     .single-product-img-gallery {
         width: 374px;
         height: 261px;
-        
+
     }
+
     .single-product-img-gallery.img1 {
         background: url('../img/rdrmini.webp') no-repeat;
     }
-    
+
     .single-product-img-gallery.img2 {
         background: url('../img/rdrmini.webp') no-repeat;
     }
-    
+
     .single-product-img-gallery.img3 {
         background: url('../img/rdrmini.webp') no-repeat;
     }
-    
+
     .single-product-img-gallery.img4 {
-        
+
         background: url('../img/rdrmini.webp') no-repeat;
     }
 
