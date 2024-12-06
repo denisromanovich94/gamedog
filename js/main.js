@@ -294,3 +294,66 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
+
+
+
+function toggleSVG(card) {
+    // Проверяем, есть ли уже SVG
+    const existingSVG = card.querySelector('.added-svg');
+
+    if (existingSVG) {
+        // Если SVG уже есть, удаляем его
+        existingSVG.remove();
+    } else {
+        // Если SVG нет, добавляем его
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("width", "19");
+        svg.setAttribute("height", "15");
+        svg.setAttribute("viewBox", "0 0 19 15");
+        svg.setAttribute("fill", "none");
+        svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        svg.classList.add("added-svg");
+        svg.innerHTML = `
+        <path d="M0.332031 6.89387L2.75648 4.46943L7.60481 9.31776L16.0898 0.832764L18.5143 3.25721L7.60536 14.1661L0.332031 6.89387Z" fill="#222222" />
+      `;
+        card.appendChild(svg);
+    }
+}
+
+
+
+
+
+
+// СЛАЙДЕР НА СТРАНИЦЕ КАСТОМ КОМПЬЮТЕР
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Получаем элементы
+    const rangeInputNew = document.getElementById("budget-range-new");
+    const minBudgetDisplay = document.getElementById("min-budget-display");
+    const maxBudgetDisplay = document.getElementById("max-budget-display");
+    const totalPriceElement = document.querySelector(".total__price-cc_itog");
+
+    // Функция для обновления закрашенной полоски и суммы
+    function updateBudgetRange() {
+        const min = parseInt(rangeInputNew.min, 10);
+        const max = parseInt(rangeInputNew.max, 10);
+        const value = parseInt(rangeInputNew.value, 10);
+
+        // Обновляем закрашенную часть ползунка
+        const percentage = ((value - min) / (max - min)) * 100;
+        rangeInputNew.style.background = `linear-gradient(to right, #99ee2d 0%, #99ee2d ${percentage}%, #444 ${percentage}%, #444 100%)`;
+
+        // Обновляем значение текущего бюджета
+        totalPriceElement.textContent = `€${value.toLocaleString()}`;
+    }
+
+    // Событие при изменении положения ползунка
+    rangeInputNew.addEventListener("input", updateBudgetRange);
+
+    // Инициализация при загрузке
+    updateBudgetRange();
+});
+

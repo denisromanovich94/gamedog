@@ -12,7 +12,9 @@
 
 
 
-
+.single-product__info {
+    width: 100%;
+}
 .card__console-block1 {
     display: flex;
     gap: 5px;

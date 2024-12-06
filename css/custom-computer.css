@@ -1,0 +1,312 @@
+.custom__top-inner {
+    padding-top: 150px;
+    padding-bottom: 90px;
+}
+
+.custom__top-in {
+    /* background: url('../img/bgcustom.webp'); */
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.custom__top-title {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 42px;
+    text-align: center;
+    color: #eee;
+    max-width: 579px;
+    margin-bottom: 15px;
+}
+
+.custom__top-text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    max-width: 579px;
+}
+
+.text-title-custom-computer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 681px;
+    height: 201px;
+}
+
+
+
+
+
+
+
+
+
+.survey__in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.survey-form {
+    clip-path: polygon(0 0, 95% 0, 100% 2%, 100% 100%, 0 100%);
+    padding-right: 57px;
+    padding-left: 57px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    max-width: 780px;
+    background-color: #1a1a1a;
+    color: #fff;
+
+}
+
+.survey-title {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 132%;
+    color: #f5ffe6;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.games__title3 {
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #f5ffe6;
+}
+
+.cc__title3 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 26px;
+    color: #f5ffe6;
+    margin-bottom: 40px;
+    margin-top: 77px;
+    text-align: center;
+    border-bottom: 1px solid #99ee2d;
+    width: 100%;
+    height: 50px;
+}
+
+.survey-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #f5ffe6;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #99ee2d;
+    height: 50px;
+    margin-bottom: 40px;
+}
+
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.form-group select,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    color: #fff;
+    font-size: 14px;
+}
+
+.checkbox-group legend {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.checkbox-option {
+    margin-bottom: 5px;
+}
+
+.range-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.range-slider input[type="range"] {
+    flex-grow: 1;
+}
+
+.range-slider #budget-value {
+    font-size: 16px;
+}
+
+.submit-button-cc {
+    display: block;
+    background-color: #99ee2d;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    color: #111;
+    padding: 10px 15px;
+    padding-right: 30px !important;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto 0;
+
+    clip-path: polygon(0 0, 75% 0, 100% 55%, 100% 100%, 0 100%);
+}
+
+
+
+.inputs.form-group::after {
+    background-image: none;
+}
+
+
+.cc__games-in {
+    display: flex;
+
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+
+/* Карточка */
+.cc__games-card {
+    position: relative;
+    display: inline-block;
+    width: 91px;
+    height: 110px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Стиль для SVG */
+.cc__games-card .added-svg {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    background: #99ee2d;
+}
+
+
+.inputs.form-group.range-slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.budget-range-slider {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.budget-range-slider span {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.budget-range-cont {
+    width: 100%;
+}
+
+
+.budget-range-cont {
+    position: relative;
+}
+
+.budget-range-cont .range-start {
+    width: 15px;
+    height: 15px;
+    background: #99ee2d;
+    /* Зеленый фон */
+    border: 2px solid #111;
+    /* Темная рамка */
+
+    /* Скругленные углы */
+    position: absolute;
+    left: -14px;
+    top: 58%;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* Выше трека */
+}
+
+
+.total__price-cc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #f5ffe6;
+    
+}
+
+.total__price-cc_itog {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    color: #f5ffe6;
+}
+
+.itog-cc {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    gap: 7px;
+
+}
+.budget__container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.inputs.form-group input::placeholder {
+    opacity: 0.5;
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+color: #fff;
+}
+.inputs.form-group textarea::placeholder {
+    opacity: 0.5;
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+color: #fff;
+}

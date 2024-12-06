@@ -1,0 +1,286 @@
+.single-product-img-gallery.img1-sc {
+    background: url('../img/comp1.png');
+}
+
+.single-product-img-gallery.img2-sc {
+    background: url('../img/comp2.png');
+}
+
+.single-product-img-gallery.img3-sc {
+    background: url('../img/comp3.png');
+}
+
+.single-product-img-gallery.img4-sc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/comp4.png');
+}
+
+.single-product-img-gallery.img5-sc {
+    background: url('../img/comp5.png');
+}
+
+.single-product-img.img-sc {
+    background: black;
+    width: 480px;
+    height: auto;
+}
+
+.filter-list.cscheck span {
+    color: #888;
+}
+
+.filter-list.cscheck {
+    display: flex;
+    gap: 30px;
+}
+
+.filter-list.cscheck legend {
+    margin-bottom: 10px;
+}
+
+
+.configuration-block {
+    background: transparent;
+    padding: 20px;
+
+    width: 100%;
+    color: #ffffff;
+
+}
+
+.configuration-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 10px);
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #f5ffe6;
+}
+
+.form-group select {
+
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #444;
+
+    background: transparent;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.illumination {
+    flex: 1 1 100%;
+    margin-top: 20px;
+}
+
+.illumination legend {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.illumination label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.illumination input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+/* Основной стиль для селекта */
+.form-group select {
+    appearance: none;
+    /* Убираем стандартный вид */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #1a1a1a;
+    /* Черный фон */
+    color: #ffffff;
+    border: 1px solid #444;
+    padding: 10px 40px 10px 15px;
+    /* Отступы */
+
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Добавление стрелки через псевдоэлемент */
+.form-group::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: 15px;
+    width: 9px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" fill="none"><path d="M4.5 6L0 0H9L4.5 6Z" fill="white"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0.5;
+    transform: translateY(-50%);
+}
+
+/* Убираем стандартную стрелку в IE */
+select::-ms-expand {
+    display: none;
+}
+
+/* Стили для состояния фокуса */
+.form-group select:focus {
+    outline: none;
+    border-color: #99ee2d;
+    /* Синяя рамка при фокусе */
+}
+
+.form-group select option:hover {
+    background: #99ee2d;
+    color: #000;
+}
+
+.more-info__block {
+    display: flex;
+    gap: 100px;
+    height: auto;
+    padding-bottom: 74px;
+}
+
+.sc__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.sc__text {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    color: #fff;
+    opacity: 0.55;
+}
+
+.sc__more-info__inner {
+    padding-right: 208px;
+    padding-left: 208px;
+}
+
+.sc__text-title.right {
+    text-align: end;
+}
+
+
+.cs__img-mobile {
+    display: none;
+}
+
+
+
+
+
+
+.specifications__inner {
+    padding-right: 208px;
+    padding-left: 208px;
+    padding-bottom: 30px;
+}
+
+
+.card__specifications {
+    clip-path: polygon(0 0, 97% 0, 100% 9%, 100% 100%, 0 100%);
+    background-color: #222;
+    padding: 16px;
+    margin-bottom: 30px;
+
+    border: 1px solid #2b2b2b;
+}
+
+.left-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__specifications-title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 132%;
+    color: #f5ffe6;
+    border-bottom: 1px solid #99ee2d;
+    margin-bottom: 30px;
+    height: 50px;
+    background-color: #222;
+}
+
+.spec {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 132%;
+    color: #f5ffe6;
+    margin-bottom: 30px;
+}
+
+.left-card__specifications,
+.right-card__specifications {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.left-card__specifications ul,
+.right-card__specifications ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-card__specifications ul li,
+.right-card__specifications ul li {
+    margin-bottom: 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #f5ffe6;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #404042;
+}
+.left-card__specifications li,
+.right-card__specifications li {
+    
+    border-bottom: 1px dashed #404042;
+}
+
+
+
+
+.left-card__specifications ul li span,
+.right-card__specifications ul li span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #888;
+}
