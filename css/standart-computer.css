@@ -222,6 +222,28 @@ select::-ms-expand {
     justify-content: space-between;
 }
 
+.filter-list.cscheck legend {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #f5ffe6;
+}
+
+.filter-list.cscheck label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 132%;
+    color: #f5ffe6;
+}
+.filter-list.cscheck span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 132%;
+    color: #888;
+}
+
 .card__specifications-title {
     font-family: var(--font-family);
     font-weight: 700;
@@ -268,9 +290,10 @@ select::-ms-expand {
     justify-content: space-between;
     border-bottom: 1px dashed #404042;
 }
+
 .left-card__specifications li,
 .right-card__specifications li {
-    
+
     border-bottom: 1px dashed #404042;
 }
 
