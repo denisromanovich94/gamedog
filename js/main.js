@@ -24,9 +24,28 @@ if (catalogButton && dropdownMenu && catalogOverlay) {
 }
 
 // Бургер меню
+// const burgerButton = document.getElementById("burger-toggle");
+// const burgerLines = document.querySelectorAll(".burger-menu__line");
+// const mobileMenu = document.getElementById("mobile-menu");
+
+// // Открытие/закрытие бургер-меню
+// if (burgerButton && burgerLines && mobileMenu) {
+//     burgerButton.addEventListener("click", () => {
+//         const isMenuVisible = mobileMenu.classList.contains("show");
+
+//         if (isMenuVisible) {
+//             mobileMenu.classList.remove("show");
+//             burgerLines.forEach(line => line.classList.remove("active"));
+//         } else {
+//             mobileMenu.classList.add("show");
+//             burgerLines.forEach(line => line.classList.add("active"));
+//         }
+//     });
+// }
 const burgerButton = document.getElementById("burger-toggle");
 const burgerLines = document.querySelectorAll(".burger-menu__line");
 const mobileMenu = document.getElementById("mobile-menu");
+const body = document.body; // Получаем body для управления прокруткой
 
 // Открытие/закрытие бургер-меню
 if (burgerButton && burgerLines && mobileMenu) {
@@ -36,13 +55,14 @@ if (burgerButton && burgerLines && mobileMenu) {
         if (isMenuVisible) {
             mobileMenu.classList.remove("show");
             burgerLines.forEach(line => line.classList.remove("active"));
+            body.classList.remove("no-scroll"); // Убираем запрет на прокрутку
         } else {
             mobileMenu.classList.add("show");
             burgerLines.forEach(line => line.classList.add("active"));
+            body.classList.add("no-scroll"); // Добавляем запрет на прокрутку
         }
     });
 }
-
 
 
 
