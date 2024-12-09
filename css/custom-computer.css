@@ -4,7 +4,7 @@
 }
 
 .custom__top-in {
-    background: url('../img/bgcustom.jpg');
+    /* background: url('../img/bgcustom.webp'); */
     height: 320px;
     display: flex;
     align-items: center;

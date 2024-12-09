@@ -111,3 +111,10 @@ fill: #9aee2d;
     text-align: center;
     gap: 10px;
 }
+
+
+
+.socials__footer-img {
+    width: 24px;
+    height: 24px;
+}

@@ -357,3 +357,110 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBudgetRange();
 });
 
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const allPlatformsButton = document.querySelector('.hero__swiper-button-active'); // Кнопка "All Platforms"
+    const swiperList = document.querySelector('.hero__swiper-list'); // Список ul
+
+    const toggleListItems = () => {
+        swiperList.classList.toggle('visible'); // Переключаем класс для видимости скрытых элементов
+    };
+
+    const closeListOnOutsideClick = (event) => {
+        if (!swiperList.contains(event.target) && !allPlatformsButton.contains(event.target)) {
+            swiperList.classList.remove('visible'); // Закрываем список, если клик вне области
+        }
+    };
+
+    allPlatformsButton.addEventListener('click', (event) => {
+        event.stopPropagation(); // Останавливаем всплытие события
+        toggleListItems();
+    });
+
+    document.addEventListener('click', closeListOnOutsideClick); // Закрытие при клике вне списка
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navItems = document.querySelectorAll(".nav-item");
+    const heroInner = document.querySelector(".hero__inner");
+    const heroTitles = document.querySelectorAll(".hero__title");
+    const heroTexts = document.querySelectorAll(".hero__text");
+
+    let currentSlide = 0;
+    const slideCount = navItems.length;
+    const slideInterval = 15000; // 15 секунд
+
+    const changeSlide = (index) => {
+        // Снимаем активные классы и скрываем все элементы
+        navItems.forEach((item) => item.classList.remove("active"));
+        heroTitles.forEach((title) => title.style.display = "none");
+        heroTexts.forEach((text) => text.style.display = "none");
+
+        // Добавляем активный класс для текущего слайда
+        navItems[index].classList.add("active");
+
+        // Отображаем соответствующие заголовок и текст
+        if (heroTitles[index]) {
+            heroTitles[index].style.display = "block";
+        }
+        if (heroTexts[index]) {
+            heroTexts[index].style.display = "block";
+        }
+
+        // Меняем фон hero__inner
+        heroInner.className = `hero__inner slide${index + 1}`;
+
+        currentSlide = index;
+    };
+
+    // Автоматическое переключение слайдов
+    let slideTimer = setInterval(() => {
+        let nextSlide = (currentSlide + 1) % slideCount;
+        changeSlide(nextSlide);
+    }, slideInterval);
+
+    // Переключение по клику на навигацию
+    navItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            clearInterval(slideTimer); // Останавливаем автоматическое переключение
+            changeSlide(index);
+            slideTimer = setInterval(() => {
+                let nextSlide = (currentSlide + 1) % slideCount;
+                changeSlide(nextSlide);
+            }, slideInterval);
+        });
+    });
+
+    // Устанавливаем начальный слайд
+    changeSlide(currentSlide);
+});
+

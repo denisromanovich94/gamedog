@@ -11,6 +11,17 @@
 @import "standart-computer.css";
 @import "custom-computer.css";
 
+.swiper-wrapper {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
 
 
 .hero {
@@ -25,6 +36,53 @@
     height: 700px;
     z-index: 1;
 }
+
+.hero__inner.slide2 {
+    background: grey;
+}
+.hero__inner.slide3{
+background: rosybrown;
+
+}
+
+
+.hero__title {
+    display: block;
+}
+
+.hero__text {
+    display: block;
+}
+
+
+.hero__title.slide2{
+    display: none;
+}
+
+.hero__title.slide3{
+    display: none;
+}
+
+.hero__text.slide2 {
+    display: none;
+}
+.hero__text.slide3 {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .hero__in {
     display: flex;
@@ -219,7 +277,9 @@
     display: flex;
     gap: 107px;
     margin-left: 205px;
-
+align-items: center;
+text-align: center;
+padding-top: 20px;
 }
 
 .hero__swiper-title {
@@ -1100,18 +1160,21 @@
     }
 
     .footer__in {
-        height: 500;
-        width: 375px;
+        height: auto;
+        width: 100%;
     }
 
-
+    
+    
+    
 
     .footer__right {
         flex-direction: column;
         padding-top: 10px;
+        max-width: 100%;
 
     }
-
+    
     .footer__about-us__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1132,10 +1195,15 @@
         flex-direction: row;
         width: 100%;
         height: 100px;
-        justify-content: start;
+        justify-content: space-between;
+        padding-right: 20px;
     }
-
+    .footer__inner {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
     .footer__left {
+        max-width: 100%;
         height: 200px;
         background: rgba(72, 77, 67, 0.1);
         backdrop-filter: blur(30px);
@@ -1173,9 +1241,7 @@
         padding-right: 56px;
     }
 
-    .footer__socials-link.facebook {
-        padding-left: 12px;
-    }
+
 
     .hero__in {
         max-width: 800px;
@@ -1208,6 +1274,14 @@
 
     .about__computer-inner {
         padding-left: 20px;
+    }
+
+    .second-item {
+        text-align: end;
+
+    }
+    .footer__about-us__list {
+        padding-right: 30px;
     }
 }
 
@@ -1385,6 +1459,41 @@
         padding-left: 20px;
     }
 
+
+
+
+
+
+
+    .hero__swiper-list {
+        display: flex;
+        flex-direction: column; /* Элементы в колонку */
+        gap: 10px; /* Отступы между элементами */
+        position: relative; /* Относительное позиционирование */
+    }
+    
+    .hero__swiper-item1 {
+        display: none; /* По умолчанию скрыты */
+    }
+    
+    .hero__swiper-list.visible .hero__swiper-item1 {
+        display: flex; /* Показываем элементы при открытии */
+        justify-content: center; /* Центрируем текст */
+        align-items: center;
+        background-color: #222; /* Цвет фона */
+        color: #fff; /* Цвет текста */
+        padding: 10px 20px; /* Отступы внутри элементов */
+        border: 1px solid #444; /* Граница */
+    }
+    
+    .hero__swiper-item1:hover {
+        background-color: #333; /* Изменение цвета фона при наведении */
+        cursor: pointer; /* Указатель мыши */
+    }
+
+
+
+    
 }
 
 @media (max-width: 863px) {
@@ -1577,7 +1686,9 @@
 
 
 
-
+    .swiper-wrapper {
+        overflow: visible;
+    }
 }
 
 
