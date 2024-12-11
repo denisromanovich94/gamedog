@@ -23,25 +23,7 @@ if (catalogButton && dropdownMenu && catalogOverlay) {
     });
 }
 
-// Бургер меню
-// const burgerButton = document.getElementById("burger-toggle");
-// const burgerLines = document.querySelectorAll(".burger-menu__line");
-// const mobileMenu = document.getElementById("mobile-menu");
 
-// // Открытие/закрытие бургер-меню
-// if (burgerButton && burgerLines && mobileMenu) {
-//     burgerButton.addEventListener("click", () => {
-//         const isMenuVisible = mobileMenu.classList.contains("show");
-
-//         if (isMenuVisible) {
-//             mobileMenu.classList.remove("show");
-//             burgerLines.forEach(line => line.classList.remove("active"));
-//         } else {
-//             mobileMenu.classList.add("show");
-//             burgerLines.forEach(line => line.classList.add("active"));
-//         }
-//     });
-// }
 const burgerButton = document.getElementById("burger-toggle");
 const burgerLines = document.querySelectorAll(".burger-menu__line");
 const mobileMenu = document.getElementById("mobile-menu");
@@ -430,6 +412,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Отключаем выделение текста для hero__title и hero__text
+    const disableTextSelection = (elements) => {
+        elements.forEach(element => {
+            element.style.userSelect = "none";
+        });
+    };
     const navItems = document.querySelectorAll(".nav-item");
     const heroInner = document.querySelector(".hero__inner");
     const heroTitles = document.querySelectorAll(".hero__title");
@@ -480,7 +468,49 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Перемещение мышью для перелистывания
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let threshold = 50; // Порог для определения свайпа
+
+    heroInner.addEventListener("mousedown", (event) => {
+        clearInterval(slideTimer); // Останавливаем автоматическое переключение
+        isDragging = true;
+        startX = event.clientX;
+        
+    });
+
+    document.addEventListener("mousemove", (event) => {
+        if (!isDragging) return;
+        currentX = event.clientX;
+    });
+
+    document.addEventListener("mouseup", () => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+
+        const deltaX = currentX - startX;
+        if (deltaX > threshold) { // Свайп вправо
+            let prevSlide = (currentSlide - 1 + slideCount) % slideCount;
+            changeSlide(prevSlide);
+        } else if (deltaX < -threshold) { // Свайп влево
+            let nextSlide = (currentSlide + 1) % slideCount;
+            changeSlide(nextSlide);
+        }
+
+        // Перезапускаем таймер
+        slideTimer = setInterval(() => {
+            let nextSlide = (currentSlide + 1) % slideCount;
+            changeSlide(nextSlide);
+        }, slideInterval);
+    });
+
     // Устанавливаем начальный слайд
     changeSlide(currentSlide);
-});
 
+    // Отключаем выделение текста
+    disableTextSelection(heroTitles);
+    disableTextSelection(heroTexts);
+});
